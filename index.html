@@ -13,133 +13,66 @@
             padding: 0;
             font-family: Arial, sans-serif; /* Added font-family */
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto; /* Center the container */
-            padding: 20px; /* Added padding */
+        .item1 { 
+            grid-area: header; 
+            text-align: left; 
+            padding: 20px 20px 20px 0; 
         }
-        .header {
-            background-color: #fdd7fd;
-            color: #660046;
+        .item2 { 
+            grid-area: menu; 
+            padding: 200px 0;
+            text-align: center;}
+        
+        .item6 { 
+            grid-area: added;
+            padding: 10px 0;
+            text-align: center; }
+        
+        .item4 { 
+            grid-area: right; 
+            padding: 180px 0;
+            text-align: center;}
+        
+        .item5 { 
+            grid-area: footer;
+            padding: 20px 0;
+            text-align: center;}
+        
+        .item3 { 
+            grid-area: main; 
+            padding: 180px 0;
+            text-align: center; }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'header header header header header '
+            'menu added added added added'
+            'menu main main right right '
+            'footer footer footer footer footer ';
+            grid-gap: 10px;
+            background-color: #e88427;
             padding: 10px;
-            text-align: left; /* Align text to the left */
-            width: 100%;
-            position: fixed;
-            top: 0;
         }
-        .spacer {
-            height: 50px; /* Added height to create space between header and boxes */
+
+        .grid-container > div {
+            background-color: rgba(253, 229, 193, 0.8);
+            font-size: 20px;
         }
-        .footer {
-            background-color: #660046;
-            color: #fdd7fd;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-        }
-        .boxes {
-            display: flex;
-            justify-content: space-between; /* Adjusted spacing between boxes */
-            flex-wrap: wrap; /* Added flex-wrap */
-            margin-top: 50px; /* Added margin-top to accommodate header */
-        }
-        .box1 {
-            width: calc(33.33% - 20px); /* Adjusted box width */
-            height: 750px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .box2 {
-            width: calc(33.33% - 20px); /* Adjusted box width */
-            background-color: #f9f9f9;
-            height: 400px;
-            padding: 15px;
-            margin-top: 240px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .box3 {
-            width: calc(33.33% - 20px); /* Adjusted box width */
-            background-color: #f9f9f9;
-            height: 530px;
-            padding: 15px;
-            margin-top: 240px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .horizontal-box {
-            position: absolute;
-            width: 770px;
-            height: 150px; /* Adjust height as needed */
-            left: 535px;
-            top: 100px;
-            background-color: #fdd7fd;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .horizontal-box1 {
-            position: absolute;
-            width: 370px;
-            height: 150px; /* Adjust height as needed */
-            left: 535px;
-            top: 690px;
-            background-color: #fdd7fd;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        @media screen and (max-width: 600px) {
-            .box {
-                width: 100%; /* Set box width to full width on smaller screens */
-            }
-        }
-        .indent {
-            margin-left: 400px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Added margin bottom */
-        }
+    
     </style>
 </head>
 <body>
 
-<div class="header">
-    <p>Header content here</p>
-</div>
-
-<div class="container">
-    <div class="boxes">
-        <div class="box1">
-            <h2>In the end</h2>
-            <p>Song lyrics here</p>
-        </div>
-        <div class="box2">
-            <h2>One more hour</h2>
-            <p>Song lyrics here</p>
-        </div>
-        <div class="box3">
-            <h2>Let it be</h2> <!-- Modified box content -->
-            <p>Song lyrics here</p> <!-- Modified box content -->
-        </div>
-        <div class="horizontal-box">
-            <p>not like the others.</p>
-        </div>
-        <div class="horizontal-box1">
-            <p>not like the others.</p>
-        </div>
-    </div>
-</div>
-
-<div class="footer">
-    <p>@musiccalsite</p>
+<div class="grid-container">
+    <div class="item1"> Music lyrics for the best</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>  
+    <div class="item4">Right</div>
+    <div class="item5">@musiccalsite</div>
+    <div class="item6">All of the rigths are protected. Parental advisory</div>
 </div>
 
 </body>
 </html>
-
 
