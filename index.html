@@ -1,78 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <title>CSS Макет веб-сайта</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif; /* Added font-family */
-        }
-        .item1 { 
-            grid-area: header; 
-            text-align: left; 
-            padding: 20px 20px 20px 0; 
-        }
-        .item2 { 
-            grid-area: menu; 
-            padding: 200px 0;
-            text-align: center;}
-        
-        .item6 { 
-            grid-area: added;
-            padding: 10px 0;
-            text-align: center; }
-        
-        .item4 { 
-            grid-area: right; 
-            padding: 180px 0;
-            text-align: center;}
-        
-        .item5 { 
-            grid-area: footer;
-            padding: 20px 0;
-            text-align: center;}
-        
-        .item3 { 
-            grid-area: main; 
-            padding: 180px 0;
-            text-align: center; }
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Лаб 3</title>
 
-        .grid-container {
-            display: grid;
-            grid-template-areas:
-            'header header header header header '
-            'menu added added added added'
-            'menu main main right right '
-            'footer footer footer footer footer ';
-            grid-gap: 10px;
-            background-color: #e88427;
-            padding: 10px;
-        }
+        <link rel= 'stylesheet' href='./normalize.css' />
+        <link rel= 'stylesheet' href='./style_grid.css' />
+  </head>
+  <body>
 
-        .grid-container > div {
-            background-color: rgba(253, 229, 193, 0.8);
-            font-size: 20px;
-        }
-    
-    </style>
-</head>
-<body>
+    <header> <div class="header-left-block">Header mini</div>Header</header>
+    <main>
+      <div class="left-bar">Left bar</div>
+      <div class="content">
+        <div class="content-top">Top</div>
+        <div class="content-bot">
+          <div class="content-left">Left content <div class="content-left-block">Mini block</div></div>
+          <div class="content-right">Right content</div>
+        </div>
+      </div>
+    </main>
+    <footer>Footer</footer>
 
-<div class="grid-container">
-    <div class="item1"> Music lyrics for the best</div>
-    <div class="item2">Menu</div>
-    <div class="item3">Main</div>  
-    <div class="item4">Right</div>
-    <div class="item5">@musiccalsite</div>
-    <div class="item6">All of the rigths are protected. Parental advisory</div>
-</div>
+  </body>
 
-</body>
 </html>
-
